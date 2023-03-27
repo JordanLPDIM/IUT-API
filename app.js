@@ -3,11 +3,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var cors = require('cors');
+
+var app = express();
+
+app.use(cors());
 
 var indexRouter = require('./routes/index');
 var studentRouter = require('./routes/student');
 
-var app = express();
+
 
 var connectionString = "mongodb+srv://jordanLpdim:Dawersx62@iutcluster.v1mka8y.mongodb.net/test";
 var mongoDB = process.env.MONGODB_URI || connectionString;
