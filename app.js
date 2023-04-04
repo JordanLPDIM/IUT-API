@@ -6,7 +6,6 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 
 var app = express();
-
 app.use(cors());
 
 var indexRouter = require('./routes/index');
